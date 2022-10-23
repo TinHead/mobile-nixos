@@ -13,8 +13,9 @@ pkgs.mkShell rec {
   buildInputs = with pkgs; [
     # Custom tools
     mobile-nixos.autoport     # Helps users kickstart their ports
-
-    # Third party tools
+    ncurses
+    pkg-config
+        # Third party tools
     android-tools             # For flashing android devices with fastboot
     dtc                       # For playing around with device tree files
     dtbTool                   # Combines multiple device tree blobs into one image

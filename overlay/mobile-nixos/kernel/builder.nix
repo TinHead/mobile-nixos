@@ -551,7 +551,7 @@ stdenv.mkDerivation (inputArgs // {
         export PKG_CONFIG_PATH="${buildPackages.ncurses.dev}/lib/pkg-config"
         if [ -e scripts/kconfig/nconf-cfg.sh ]; then
           sed -i"" \
-            -e 's/$(pkg-config --libs $PKG)/-L $(pkg-config --variable=libdir ncursesw) $(pkg-config --libs $PKG)/' \
+            -e 's/$(pkg-config --libs $PKG)/-L $(pkg-config --variable=libdir ncurses) $(pkg-config --libs $PKG)/' \
             scripts/kconfig/nconf-cfg.sh
         fi
 
